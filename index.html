@@ -22,7 +22,7 @@
     content="Você acabou de entrar como jovem aprendiz. Sua primeira missão começa agora."
   />
   <meta property="og:type" content="website" />
-  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg%20xmlns%3D%22http%3A//www.w3.org/2000/svg%22%20viewBox%3D%220%200%2064%2064%22%3E%0A%3Crect%20width%3D%2264%22%20height%3D%2264%22%20rx%3D%2218%22%20fill%3D%22%23030304%22/%3E%0A%3Ctext%20x%3D%228%22%20y%3D%2240%22%20font-family%3D%22Arial%20Black%2CArial%2Csans-serif%22%20font-weight%3D%22900%22%20font-size%3D%2218%22%20fill%3D%22%23ffffff%22%3EAdapt%3C/text%3E%0A%3Ccircle%20cx%3D%2254%22%20cy%3D%2216%22%20r%3D%226%22%20fill%3D%22%23008a79%22/%3E%0A%3C/svg%3E" />
+  <link rel="icon" type="image/svg+xml" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%230d0d0d'/%3E%3Ctext x='4' y='26' font-family='Arial Black,Arial,sans-serif' font-weight='900' font-size='26' fill='%2339ff14'%3EA%3C/text%3E%3Ccircle cx='27' cy='6' r='4' fill='%2339ff14'/%3E%3C/svg%3E" />
 
   <!-- Google Fonts: permitido pelo briefing -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -1358,757 +1358,6 @@
         transition-duration: 0.01ms !important;
       }
     }
-  
-    /* =========================================================
-      12. CAMADA VISUAL — IDENTIDADE ADAPT
-      Aplicação visual nova sem alterar funções, fluxos ou lógica JS.
-      Paleta: #008a79, #ffffff, #030304, #ffff00, #8a97c1
-      Tipos previstos: Bourbon + Nexa/Nexa Extra Bold, com fallbacks.
-    ========================================================== */
-
-    :root {
-      --bg: #030304;
-      --bg-soft: #111216;
-      --card: rgba(255, 255, 255, 0.055);
-      --card-strong: rgba(0, 138, 121, 0.22);
-      --neon: #008a79;
-      --neon-soft: rgba(0, 138, 121, 0.17);
-      --purple: #8a97c1;
-      --purple-soft: rgba(138, 151, 193, 0.18);
-      --yellow: #ffff00;
-      --yellow-soft: rgba(255, 255, 0, 0.14);
-      --text: #ffffff;
-      --muted: rgba(255, 255, 255, 0.66);
-      --danger: #fb7185;
-      --danger-soft: rgba(251, 113, 133, 0.16);
-      --border: rgba(255, 255, 255, 0.12);
-      --shadow-neon: 0 0 28px rgba(0, 138, 121, 0.34);
-      --shadow-purple: 0 18px 50px rgba(138, 151, 193, 0.18);
-      --font-display: "Bourbon", "Nexa Extra Bold", "Impact", "Arial Black", sans-serif;
-      --font-heading: "Nexa Extra Bold", "Nexa Bold", "Space Grotesk", "Arial Black", sans-serif;
-      --font-body: "Nexa", "Nexa Bold", "Inter", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-
-    html {
-      background: #030304;
-      font-family: var(--font-body);
-    }
-
-    body {
-      position: relative;
-      background:
-        radial-gradient(circle at 18% 8%, rgba(255, 255, 255, 0.10), transparent 12%),
-        radial-gradient(circle at 76% 18%, rgba(0, 138, 121, 0.22), transparent 26%),
-        radial-gradient(circle at 18% 84%, rgba(138, 151, 193, 0.16), transparent 30%),
-        linear-gradient(145deg, #030304 0%, #111216 54%, #030304 100%);
-      color: #ffffff;
-      isolation: isolate;
-    }
-
-    body::before {
-      content: "";
-      position: fixed;
-      inset: 0;
-      z-index: 0;
-      pointer-events: none;
-      background-image:
-        radial-gradient(circle, rgba(255, 255, 255, 0.62) 0 1px, transparent 1.6px),
-        radial-gradient(circle, rgba(255, 255, 255, 0.22) 0 1px, transparent 1.8px);
-      background-position: 0 0, 42px 58px;
-      background-size: 116px 116px, 184px 184px;
-      opacity: 0.36;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.62), rgba(0,0,0,0.22));
-    }
-
-    body::after {
-      content: "";
-      position: fixed;
-      top: 10%;
-      right: -145px;
-      z-index: 0;
-      width: 310px;
-      height: 310px;
-      border-radius: 999px;
-      pointer-events: none;
-      background:
-        radial-gradient(circle at 34% 32%, rgba(255,255,255,0.42), transparent 0 14px),
-        radial-gradient(circle at 58% 62%, rgba(3,3,4,0.62), transparent 0 24px),
-        radial-gradient(circle at 43% 48%, rgba(255,255,255,0.34), transparent 0 16px),
-        radial-gradient(circle at 50% 50%, rgba(255,255,255,0.20), rgba(138,151,193,0.16) 54%, transparent 68%);
-      filter: blur(0.2px);
-      opacity: 0.30;
-    }
-
-    .app-shell {
-      z-index: 1;
-    }
-
-    .app-shell::before {
-      background-image:
-        linear-gradient(rgba(255, 255, 255, 0.026) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(255, 255, 255, 0.026) 1px, transparent 1px);
-      background-size: 54px 54px;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.12), transparent 72%);
-    }
-
-    .top-bar {
-      padding-top: 10px;
-    }
-
-    .brand {
-      position: relative;
-      width: 128px;
-      min-height: 42px;
-      gap: 0;
-      color: #ffffff;
-      text-transform: none;
-      letter-spacing: -0.08em;
-      font-family: var(--font-heading);
-      filter: drop-shadow(0 10px 22px rgba(0, 0, 0, 0.36));
-    }
-
-    .brand .brand-mark,
-    .brand > span:last-child {
-      display: none;
-    }
-
-    .brand::before {
-      content: "Adapt";
-      position: absolute;
-      left: 0;
-      top: 50%;
-      transform: translateY(-50%);
-      color: #ffffff;
-      font-family: var(--font-heading);
-      font-size: 2rem;
-      font-weight: 900;
-      line-height: 1;
-      letter-spacing: -0.09em;
-    }
-
-    .brand::after {
-      content: "";
-      position: absolute;
-      left: 103px;
-      top: 4px;
-      width: 12px;
-      height: 12px;
-      border-radius: 999px;
-      background: #008a79;
-      box-shadow: 0 0 18px rgba(0, 138, 121, 0.76);
-    }
-
-    .score-pill {
-      border-color: rgba(0, 138, 121, 0.34);
-      color: #ffffff;
-      background:
-        linear-gradient(145deg, rgba(0, 138, 121, 0.18), rgba(255, 255, 255, 0.045));
-      box-shadow: 0 0 22px rgba(0, 138, 121, 0.12);
-    }
-
-    .progress-pill {
-      background:
-        linear-gradient(145deg, rgba(138, 151, 193, 0.18), rgba(255, 255, 255, 0.045));
-      border-color: rgba(138, 151, 193, 0.36);
-      box-shadow: 0 0 22px rgba(138, 151, 193, 0.12);
-    }
-
-    .screen-card {
-      border: 1px solid rgba(255, 255, 255, 0.13);
-      background:
-        linear-gradient(180deg, rgba(255, 255, 255, 0.072), rgba(255, 255, 255, 0.028)),
-        radial-gradient(circle at 18% 0%, rgba(0, 138, 121, 0.20), transparent 40%),
-        radial-gradient(circle at 100% 100%, rgba(138, 151, 193, 0.13), transparent 42%),
-        rgba(3, 3, 4, 0.90);
-      box-shadow:
-        0 26px 86px rgba(0, 0, 0, 0.58),
-        0 0 0 1px rgba(0, 138, 121, 0.08),
-        inset 0 1px 0 rgba(255, 255, 255, 0.09);
-    }
-
-    .screen-card::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      pointer-events: none;
-      background-image:
-        radial-gradient(circle, rgba(255,255,255,0.32) 0 1px, transparent 1.5px),
-        radial-gradient(circle, rgba(255,255,255,0.16) 0 1px, transparent 1.8px),
-        linear-gradient(125deg, transparent 0 44%, rgba(0, 138, 121, 0.18) 44% 45%, transparent 45% 100%);
-      background-position: 0 0, 28px 42px, center;
-      background-size: 92px 92px, 142px 142px, 100% 100%;
-      opacity: 0.42;
-      mask-image: linear-gradient(to bottom, rgba(0,0,0,0.95), rgba(0,0,0,0.38));
-    }
-
-    .screen-card::after {
-      background:
-        radial-gradient(circle, rgba(0, 138, 121, 0.42), rgba(0, 138, 121, 0.10) 54%, transparent 70%);
-      opacity: 0.82;
-      filter: blur(6px);
-    }
-
-    .screen-content {
-      z-index: 2;
-    }
-
-    .eyebrow,
-    .construction-badge,
-    .challenge-meta {
-      color: #ffffff;
-      background:
-        linear-gradient(145deg, rgba(0, 138, 121, 0.24), rgba(255, 255, 255, 0.06));
-      border: 1px solid rgba(0, 138, 121, 0.40);
-      box-shadow: 0 0 22px rgba(0, 138, 121, 0.10);
-      font-family: var(--font-heading);
-      letter-spacing: 0.045em;
-    }
-
-    h1,
-    h2,
-    .traffic-title,
-    .result-title,
-    .final-title {
-      font-family: var(--font-display);
-      color: #ffffff;
-      letter-spacing: -0.045em;
-      text-shadow:
-        0 0 24px rgba(0, 138, 121, 0.16),
-        0 10px 34px rgba(0, 0, 0, 0.42);
-    }
-
-    .subtitle,
-    .scenario-text,
-    .result-text,
-    .final-text,
-    .ranking-state,
-    .easter-note {
-      color: var(--muted);
-      font-family: var(--font-body);
-    }
-
-    .primary-button,
-    .secondary-button,
-    .danger-button,
-    .choice-button,
-    .sector-card,
-    .game-input,
-    .field-label,
-    .score-pill,
-    .qr-caption {
-      font-family: var(--font-heading);
-    }
-
-    .primary-button {
-      color: #ffffff;
-      background:
-        linear-gradient(145deg, #008a79 0%, #006e61 100%);
-      border: 1px solid rgba(255, 255, 255, 0.14);
-      box-shadow:
-        0 0 28px rgba(0, 138, 121, 0.34),
-        0 18px 42px rgba(0, 0, 0, 0.28),
-        inset 0 -4px 0 rgba(0, 0, 0, 0.20);
-    }
-
-    .primary-button:hover {
-      box-shadow:
-        0 0 38px rgba(0, 138, 121, 0.52),
-        0 18px 42px rgba(0, 0, 0, 0.28),
-        inset 0 -4px 0 rgba(0, 0, 0, 0.20);
-    }
-
-    .secondary-button {
-      color: #ffffff;
-      background:
-        linear-gradient(145deg, rgba(255, 255, 255, 0.078), rgba(138, 151, 193, 0.10));
-      border: 1px solid rgba(255, 255, 255, 0.16);
-    }
-
-    .secondary-button:hover {
-      border-color: rgba(0, 138, 121, 0.42);
-      box-shadow: 0 0 24px rgba(0, 138, 121, 0.12);
-    }
-
-    .welcome-visual,
-    .final-trophy,
-    .traffic-avatar,
-    .scenario-emoji,
-    .result-icon,
-    .easter-skull {
-      border-color: rgba(0, 138, 121, 0.34);
-      background:
-        radial-gradient(circle at 24% 12%, rgba(255, 255, 255, 0.24), transparent 20%),
-        linear-gradient(145deg, #008a79 0%, #006f63 74%, #030304 145%);
-      box-shadow:
-        0 0 36px rgba(0, 138, 121, 0.26),
-        0 20px 48px rgba(0, 0, 0, 0.34);
-    }
-
-    .welcome-visual {
-      position: relative;
-      width: 132px;
-      height: 132px;
-      border-radius: 34px;
-      background:
-        radial-gradient(circle at 20% 0%, rgba(255, 255, 255, 0.26), transparent 24%),
-        linear-gradient(145deg, #008a79, #006f63);
-      transform: rotate(3deg);
-    }
-
-    .welcome-visual span {
-      display: none;
-    }
-
-    .welcome-visual::before {
-      content: "Adapt";
-      color: #ffffff;
-      font-family: var(--font-heading);
-      font-size: 2rem;
-      font-weight: 900;
-      letter-spacing: -0.09em;
-      line-height: 1;
-    }
-
-    .welcome-visual::after {
-      content: "";
-      position: absolute;
-      top: 33px;
-      right: 20px;
-      width: 12px;
-      height: 12px;
-      border-radius: 999px;
-      background: #ffffff;
-      box-shadow: 0 0 16px rgba(255, 255, 255, 0.42);
-    }
-
-    .sector-card {
-      border-color: rgba(255, 255, 255, 0.12);
-      background:
-        linear-gradient(145deg, rgba(0, 138, 121, 0.20), rgba(255, 255, 255, 0.045)),
-        rgba(255, 255, 255, 0.035);
-      box-shadow:
-        0 16px 34px rgba(0, 0, 0, 0.28),
-        inset 0 1px 0 rgba(255, 255, 255, 0.055);
-    }
-
-    .sector-card::before {
-      background:
-        radial-gradient(circle, rgba(255, 255, 0, 0.22), rgba(0, 138, 121, 0.16) 55%, transparent 70%);
-    }
-
-    .sector-card:hover {
-      border-color: rgba(0, 138, 121, 0.48);
-      background:
-        linear-gradient(145deg, rgba(0, 138, 121, 0.30), rgba(138, 151, 193, 0.10)),
-        rgba(255, 255, 255, 0.050);
-      box-shadow:
-        0 22px 46px rgba(0, 0, 0, 0.32),
-        0 0 26px rgba(0, 138, 121, 0.18);
-    }
-
-    .sector-completed-badge {
-      background: rgba(0, 138, 121, 0.18);
-      border-color: rgba(0, 138, 121, 0.42);
-      box-shadow: 0 0 18px rgba(0, 138, 121, 0.18);
-    }
-
-    .sector-progress-badge {
-      background: var(--yellow-soft);
-      border-color: rgba(255, 255, 0, 0.44);
-      color: #ffff00;
-    }
-
-    .sector-notice,
-    .final-score,
-    .ranking-item.is-current {
-      color: #ffffff;
-      background:
-        linear-gradient(145deg, rgba(0, 138, 121, 0.20), rgba(255, 255, 255, 0.045));
-      border-color: rgba(0, 138, 121, 0.36);
-      box-shadow: 0 0 24px rgba(0, 138, 121, 0.12);
-    }
-
-    .back-to-sectors-btn {
-      color: rgba(255, 255, 255, 0.74);
-      background: rgba(255, 255, 255, 0.055);
-      border-color: rgba(255, 255, 255, 0.14);
-      font-family: var(--font-heading);
-    }
-
-    .back-to-sectors-btn:hover {
-      color: #ffffff;
-      border-color: rgba(0, 138, 121, 0.40);
-    }
-
-    .challenge-box {
-      border-color: rgba(0, 138, 121, 0.30);
-      background:
-        linear-gradient(145deg, rgba(0, 138, 121, 0.16), rgba(138, 151, 193, 0.08)),
-        rgba(255, 255, 255, 0.038);
-      box-shadow:
-        0 18px 42px rgba(0, 0, 0, 0.25),
-        inset 0 1px 0 rgba(255, 255, 255, 0.055);
-    }
-
-    .challenge-box p {
-      color: rgba(255, 255, 255, 0.92);
-    }
-
-    .choice-button {
-      border-color: rgba(255, 255, 255, 0.14);
-      color: #ffffff;
-      background:
-        linear-gradient(145deg, rgba(255, 255, 255, 0.072), rgba(255, 255, 255, 0.034));
-      box-shadow:
-        0 16px 32px rgba(0, 0, 0, 0.22),
-        inset 0 1px 0 rgba(255, 255, 255, 0.055);
-    }
-
-    .choice-button:not(:disabled):hover {
-      border-color: rgba(0, 138, 121, 0.46);
-      background:
-        linear-gradient(145deg, rgba(0, 138, 121, 0.20), rgba(255, 255, 255, 0.055));
-      box-shadow: 0 0 28px rgba(0, 138, 121, 0.15);
-    }
-
-    .choice-button.is-revealed.is-good {
-      color: #ffffff;
-      background:
-        linear-gradient(145deg, rgba(0, 138, 121, 0.42), rgba(0, 138, 121, 0.18));
-      border-color: #008a79;
-      box-shadow: 0 0 28px rgba(0, 138, 121, 0.24);
-    }
-
-    .choice-button.is-revealed.is-bad {
-      color: rgba(255, 255, 255, 0.54);
-      background: rgba(251, 113, 133, 0.14);
-      border-color: rgba(251, 113, 133, 0.70);
-    }
-
-    .result-icon.is-success {
-      border-color: rgba(0, 138, 121, 0.38);
-      background:
-        radial-gradient(circle at top, rgba(255, 255, 255, 0.18), transparent 42%),
-        linear-gradient(145deg, rgba(0, 138, 121, 0.50), rgba(0, 138, 121, 0.16));
-      box-shadow: 0 0 38px rgba(0, 138, 121, 0.24);
-    }
-
-    .result-icon.is-failure,
-    .easter-skull {
-      border-color: rgba(251, 113, 133, 0.34);
-      background:
-        radial-gradient(circle at top, rgba(251, 113, 133, 0.24), transparent 48%),
-        linear-gradient(145deg, rgba(251, 113, 133, 0.22), rgba(3, 3, 4, 0.62));
-    }
-
-    .danger-button,
-    .exit-warning-confirm {
-      background:
-        linear-gradient(145deg, #fb7185, #be123c);
-      color: #ffffff;
-    }
-
-    .game-input {
-      border-color: rgba(255, 255, 255, 0.13);
-      background: rgba(255, 255, 255, 0.060);
-      color: #ffffff;
-    }
-
-    .game-input:focus {
-      border-color: rgba(0, 138, 121, 0.62);
-      box-shadow: 0 0 0 4px rgba(0, 138, 121, 0.14);
-      background: rgba(255, 255, 255, 0.085);
-    }
-
-    .ranking-position,
-    .ranking-score {
-      color: #008a79;
-    }
-
-    .certificate-button {
-      color: #ffffff;
-      background:
-        linear-gradient(145deg, rgba(138, 151, 193, 0.28), rgba(255, 255, 255, 0.060));
-      border-color: rgba(138, 151, 193, 0.56);
-      box-shadow: 0 0 24px rgba(138, 151, 193, 0.14);
-    }
-
-    .ranking-button {
-      color: #ffffff;
-      background:
-        linear-gradient(145deg, rgba(0, 138, 121, 0.20), rgba(255, 255, 0, 0.08));
-      border-color: rgba(0, 138, 121, 0.36);
-    }
-
-    .qr-placeholder {
-      border-color: #008a79;
-      box-shadow: 0 0 28px rgba(0, 138, 121, 0.24);
-      color: #030304;
-      font-family: var(--font-heading);
-    }
-
-    .confetti-piece:nth-child(4n + 1) {
-      background: #008a79;
-    }
-
-    .confetti-piece:nth-child(4n + 2) {
-      background: #ffffff;
-    }
-
-    .confetti-piece:nth-child(4n + 3) {
-      background: #ffff00;
-    }
-
-    .confetti-piece:nth-child(4n + 4) {
-      background: #8a97c1;
-    }
-
-    #playerNameDisplay,
-    #homePlayerName {
-      color: #ffffff !important;
-      font-family: var(--font-heading) !important;
-    }
-
-    @media (max-width: 360px) {
-      .brand {
-        width: 112px;
-      }
-
-      .brand::before {
-        font-size: 1.74rem;
-      }
-
-      .brand::after {
-        left: 90px;
-        top: 6px;
-        width: 10px;
-        height: 10px;
-      }
-    }
-
-
-    /* =========================================================
-      13. REFINO VISUAL V2 — MAIS RESPIRO E MAIS PERSONALIDADE
-      Ajustes focados em melhorar hierarquia visual sem mudar lógica.
-    ========================================================== */
-
-    h1 {
-      line-height: 0.98;
-      letter-spacing: -0.05em;
-      text-wrap: balance;
-    }
-
-    h2,
-    .traffic-title,
-    .result-title,
-    .final-title,
-    .scenario-title {
-      font-family: var(--font-heading);
-      line-height: 1.08;
-      letter-spacing: -0.022em;
-      text-wrap: balance;
-    }
-
-    h2 {
-      font-size: clamp(1.95rem, 8.4vw, 2.7rem);
-      margin-bottom: 14px;
-    }
-
-    .traffic-title,
-    .result-title,
-    .final-title {
-      line-height: 1.04;
-      letter-spacing: -0.024em;
-    }
-
-    .section-header {
-      position: relative;
-      margin-bottom: 28px;
-      padding: 18px 18px 16px 20px;
-      border: 1px solid rgba(255, 255, 255, 0.11);
-      border-radius: 24px;
-      background:
-        linear-gradient(145deg, rgba(255, 255, 255, 0.055), rgba(255, 255, 255, 0.022)),
-        rgba(255, 255, 255, 0.02);
-      box-shadow:
-        0 18px 38px rgba(0, 0, 0, 0.18),
-        inset 0 1px 0 rgba(255, 255, 255, 0.04);
-      overflow: hidden;
-      backdrop-filter: blur(12px);
-    }
-
-    .section-header::before {
-      content: "";
-      position: absolute;
-      left: 0;
-      top: 16px;
-      bottom: 16px;
-      width: 4px;
-      border-radius: 999px;
-      background: linear-gradient(180deg, #008a79 0%, #8a97c1 100%);
-      box-shadow: 0 0 20px rgba(0, 138, 121, 0.3);
-    }
-
-    .section-header::after {
-      content: "";
-      position: absolute;
-      right: -36px;
-      top: -36px;
-      width: 116px;
-      height: 116px;
-      border-radius: 999px;
-      background: radial-gradient(circle, rgba(0, 138, 121, 0.16), transparent 68%);
-      pointer-events: none;
-    }
-
-    .section-header > * {
-      position: relative;
-      z-index: 1;
-    }
-
-    .eyebrow,
-    .construction-badge,
-    .challenge-meta {
-      margin-bottom: 12px;
-    }
-
-    .subtitle,
-    .scenario-text,
-    .result-text,
-    .final-text,
-    .final-subtitle {
-      max-width: 36ch;
-      font-size: 1rem;
-      line-height: 1.62;
-    }
-
-    .screen-card {
-      border-radius: 32px;
-      padding: 28px 24px;
-    }
-
-    .top-bar {
-      margin-bottom: 8px;
-    }
-
-    .status-cluster {
-      gap: 8px;
-      padding: 4px;
-      border-radius: 999px;
-      border: 1px solid rgba(255, 255, 255, 0.08);
-      background: rgba(255, 255, 255, 0.03);
-      backdrop-filter: blur(10px);
-    }
-
-    .score-pill {
-      min-height: 38px;
-      padding: 9px 14px;
-    }
-
-    .welcome-hero .subtitle {
-      max-width: 32ch;
-    }
-
-    .sector-grid,
-    .home-link-grid,
-    .choice-stack,
-    .ranking-list {
-      gap: 14px;
-    }
-
-    .sector-card {
-      min-height: 126px;
-      padding: 18px;
-      border-radius: 24px;
-    }
-
-    .sector-name {
-      font-size: 1rem;
-      line-height: 1.25;
-      letter-spacing: -0.01em;
-    }
-
-    .challenge-box {
-      margin: 20px 0 22px;
-      padding: 18px;
-      border-radius: 24px;
-    }
-
-    .choice-button {
-      min-height: 72px;
-      justify-content: flex-start;
-      padding: 16px 18px;
-      text-align: left;
-      border-radius: 20px;
-      line-height: 1.35;
-    }
-
-    .result-card,
-    .final-card,
-    .scenario-placeholder {
-      text-align: center;
-    }
-
-    .register-form {
-      gap: 16px;
-    }
-
-    .field-group {
-      gap: 9px;
-    }
-
-    .field-label {
-      font-size: 0.88rem;
-      letter-spacing: 0.01em;
-    }
-
-    .game-input {
-      min-height: 56px;
-      border-radius: 18px;
-      padding: 15px 16px;
-    }
-
-    .ranking-item {
-      padding: 14px 16px;
-      border-radius: 18px;
-    }
-
-    .back-to-sectors-btn {
-      margin-bottom: 14px;
-      min-height: 38px;
-      padding: 8px 14px;
-    }
-
-    .exit-warning {
-      bottom: 20px;
-      border-radius: 22px;
-    }
-
-    @media (max-width: 360px) {
-      .screen-card {
-        padding: 22px 18px;
-        border-radius: 26px;
-      }
-
-      .section-header {
-        padding: 16px 14px 14px 18px;
-        border-radius: 20px;
-      }
-
-      h2,
-      .traffic-title,
-      .result-title,
-      .final-title,
-      .scenario-title {
-        line-height: 1.08;
-        letter-spacing: -0.018em;
-      }
-
-      .choice-button {
-        min-height: 66px;
-        padding: 14px 15px;
-      }
-    }
   </style>
 </head>
 
@@ -2289,6 +1538,7 @@
           </div>
         </div>
       </section>
+
 
       <!-- =========================================================
         TELA DE PERSONALIZAÇÃO DO PERSONAGEM
@@ -5226,6 +4476,7 @@
         updateScoreDisplay();
         updateProgress();
         renderSectorCards();
+        updatePlayerNameDisplay();
         updateTopBarAvatar();
         updateHomeAvatar();
         const target = s.currentScreen === 'customize' ? 'welcome' : (s.currentScreen || 'welcome');
@@ -5293,18 +4544,19 @@
       }
     }
 
-    function getAvatarColorOptions() {
-      return {
+    function updatePlayerNameDisplay() {
+      updateTopBarAvatar();
+      updateHomeAvatar();
+    }
+
+    function updateTopBarAvatar() {
+      const colorOptions = {
         neon:   { gradient: 'linear-gradient(145deg, rgba(57,255,20,0.5), rgba(57,255,20,0.15))',   border: '#39ff14' },
         purple: { gradient: 'linear-gradient(145deg, rgba(124,58,237,0.6), rgba(124,58,237,0.2))',   border: '#7c3aed' },
         blue:   { gradient: 'linear-gradient(145deg, rgba(56,189,248,0.5), rgba(56,189,248,0.15))',  border: '#38bdf8' },
         orange: { gradient: 'linear-gradient(145deg, rgba(251,146,60,0.5), rgba(251,146,60,0.15))',  border: '#fb923c' },
         pink:   { gradient: 'linear-gradient(145deg, rgba(244,114,182,0.5), rgba(244,114,182,0.15))', border: '#f472b6' }
       };
-    }
-
-    function updateTopBarAvatar() {
-      const colorOptions = getAvatarColorOptions();
       const color = colorOptions[playerAvatarColor] || colorOptions.neon;
       const bubble = document.getElementById('topBarAvatarBubble');
       const nameDisplay = document.getElementById('playerNameDisplay');
@@ -5321,7 +4573,13 @@
     }
 
     function updateHomeAvatar() {
-      const colorOptions = getAvatarColorOptions();
+      const colorOptions = {
+        neon:   { gradient: 'linear-gradient(145deg, rgba(57,255,20,0.5), rgba(57,255,20,0.15))',   border: '#39ff14' },
+        purple: { gradient: 'linear-gradient(145deg, rgba(124,58,237,0.6), rgba(124,58,237,0.2))',   border: '#7c3aed' },
+        blue:   { gradient: 'linear-gradient(145deg, rgba(56,189,248,0.5), rgba(56,189,248,0.15))',  border: '#38bdf8' },
+        orange: { gradient: 'linear-gradient(145deg, rgba(251,146,60,0.5), rgba(251,146,60,0.15))',  border: '#fb923c' },
+        pink:   { gradient: 'linear-gradient(145deg, rgba(244,114,182,0.5), rgba(244,114,182,0.15))', border: '#f472b6' }
+      };
       const color = colorOptions[playerAvatarColor] || colorOptions.neon;
       const bubble = document.getElementById('homeAvatarBubble');
       const nameEl = document.getElementById('homePlayerName');
@@ -5337,9 +4595,114 @@
       if (card) card.style.display = firstName ? 'flex' : 'none';
     }
 
-    function updatePlayerNameDisplay() {
-      updateTopBarAvatar();
-      updateHomeAvatar();
+    function initCustomizeScreen() {
+      const avatarOptions = [
+        '🧑', '👦', '👧', '👨', '👩', '🧔',
+        '👱', '🧑‍🦱', '🧑‍🦰', '🧑‍🦳', '👳', '🧕'
+      ];
+
+      const colorOptions = [
+        { id: 'neon',   label: 'Verde',   gradient: 'linear-gradient(145deg, rgba(57,255,20,0.5), rgba(57,255,20,0.15))', border: '#39ff14' },
+        { id: 'purple', label: 'Roxo',    gradient: 'linear-gradient(145deg, rgba(124,58,237,0.6), rgba(124,58,237,0.2))', border: '#7c3aed' },
+        { id: 'blue',   label: 'Azul',    gradient: 'linear-gradient(145deg, rgba(56,189,248,0.5), rgba(56,189,248,0.15))', border: '#38bdf8' },
+        { id: 'orange', label: 'Laranja', gradient: 'linear-gradient(145deg, rgba(251,146,60,0.5), rgba(251,146,60,0.15))',  border: '#fb923c' },
+        { id: 'pink',   label: 'Pink',    gradient: 'linear-gradient(145deg, rgba(244,114,182,0.5), rgba(244,114,182,0.15))', border: '#f472b6' }
+      ];
+
+      const avatarGrid = document.getElementById('avatarGrid');
+      const colorGrid = document.getElementById('colorGrid');
+      const avatarPreview = document.getElementById('avatarPreview');
+
+      if (!avatarGrid || !colorGrid || !avatarPreview) return;
+
+      function getSelectedColor() {
+        return colorOptions.find(c => c.id === playerAvatarColor) || colorOptions[0];
+      }
+
+      function updatePreview() {
+        const color = getSelectedColor();
+        avatarPreview.textContent = playerAvatar;
+        avatarPreview.style.background = color.gradient;
+        avatarPreview.style.borderColor = color.border;
+        avatarPreview.style.boxShadow = `0 0 24px ${color.border}55`;
+      }
+
+      // Renderizar avatares
+      avatarGrid.innerHTML = '';
+      avatarOptions.forEach(emoji => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.textContent = emoji;
+        btn.style.cssText = `
+          width: 100%; aspect-ratio: 1;
+          display: grid; place-items: center;
+          font-size: 1.6rem;
+          border-radius: 14px;
+          border: 2px solid rgba(255,255,255,0.1);
+          background: rgba(255,255,255,0.06);
+          cursor: pointer;
+          transition: border-color 220ms ease, background 220ms ease, transform 220ms ease;
+        `;
+        btn.addEventListener('click', () => {
+          playerAvatar = emoji;
+          avatarGrid.querySelectorAll('button').forEach(b => {
+            b.style.borderColor = 'rgba(255,255,255,0.1)';
+            b.style.background = 'rgba(255,255,255,0.06)';
+            b.style.transform = 'scale(1)';
+          });
+          btn.style.borderColor = getSelectedColor().border;
+          btn.style.background = 'rgba(255,255,255,0.12)';
+          btn.style.transform = 'scale(1.08)';
+          updatePreview();
+        });
+        if (emoji === playerAvatar) {
+          btn.style.borderColor = getSelectedColor().border;
+          btn.style.background = 'rgba(255,255,255,0.12)';
+          btn.style.transform = 'scale(1.08)';
+        }
+        avatarGrid.appendChild(btn);
+      });
+
+      // Renderizar cores
+      colorGrid.innerHTML = '';
+      colorOptions.forEach(color => {
+        const btn = document.createElement('button');
+        btn.type = 'button';
+        btn.setAttribute('aria-label', color.label);
+        btn.style.cssText = `
+          width: 100%; aspect-ratio: 1;
+          border-radius: 14px;
+          border: 2px solid ${playerAvatarColor === color.id ? color.border : 'transparent'};
+          background: ${color.gradient};
+          cursor: pointer;
+          transition: border-color 220ms ease, transform 220ms ease;
+          transform: ${playerAvatarColor === color.id ? 'scale(1.08)' : 'scale(1)'};
+        `;
+        btn.addEventListener('click', () => {
+          playerAvatarColor = color.id;
+          colorGrid.querySelectorAll('button').forEach((b, i) => {
+            b.style.borderColor = 'transparent';
+            b.style.transform = 'scale(1)';
+          });
+          btn.style.borderColor = color.border;
+          btn.style.transform = 'scale(1.08)';
+          updatePreview();
+          avatarGrid.querySelectorAll('button').forEach(b => {
+            if (b.textContent === playerAvatar) {
+              b.style.borderColor = color.border;
+            }
+          });
+        });
+        colorGrid.appendChild(btn);
+      });
+
+      updatePreview();
+
+      document.getElementById('customizeConfirmButton').addEventListener('click', () => {
+        updateTopBarAvatar();
+        updateHomeAvatar();
+        showScreen('welcome');
+      });
     }
 
     /* =========================================================
@@ -5349,7 +4712,7 @@
     const screens = {
       welcome: document.getElementById("welcomeScreen"),
       register: document.getElementById("screen-register"),
-      customize: document.getElementById("screen-customize"),
+      customize: document.getElementById('screen-customize'),
       sectors: document.getElementById("sectorScreen"),
       trafficScenarioOne: document.getElementById("trafficScenarioOneScreen"),
       trafficScenarioOneSuccess: document.getElementById("trafficScenarioOneSuccessScreen"),
@@ -5611,10 +4974,9 @@
     }
 
     function updateScoreVisibility(screenName) {
-      const shouldShowScore = !['register', 'customize'].includes(screenName);
+      const shouldShowScore = screenName !== 'register';
       scorePill.classList.toggle('is-visible', shouldShowScore && Boolean(playerName));
       progressPill.classList.toggle('is-visible', shouldShowScore && Boolean(playerName));
-      updateTopBarAvatar();
       const topBar = document.getElementById('playerTopBar');
       if (topBar) {
         topBar.style.display = (shouldShowScore && playerName) ? 'flex' : 'none';
@@ -5771,6 +5133,7 @@
 
     function resetGame() {
       clearSession();
+      updatePlayerNameDisplay();
       score = 0;
       sectorInProgress = null;
       playerName = "";
@@ -5779,8 +5142,7 @@
       playerAvatar = "🧑";
       playerAvatarColor = "neon";
       playerTitle = "";
-      updateTopBarAvatar();
-      updateHomeAvatar();
+      updatePlayerNameDisplay();
       resultSaved = false;
       completedSectors.clear();
       resetScenarioAttempts();
@@ -5857,6 +5219,7 @@
         return;
       }
 
+      updatePlayerNameDisplay();
       updateTopBarAvatar();
       updateHomeAvatar();
       showScreen("customize");
@@ -6595,7 +5958,7 @@
 
 
     document.getElementById('brandHomeButton').addEventListener('click', () => {
-      const outOfGame = ['register', 'customize', 'welcome'].some(name =>
+      const outOfGame = ['register', 'welcome'].some(name =>
         screens[name] && screens[name].classList.contains('is-active')
       );
       if (!outOfGame) {
@@ -6777,127 +6140,6 @@
     playAgainFromEasterButton.addEventListener("click", () => {
       resetGame();
     });
-
-
-    function initCustomizeScreen() {
-      const avatarOptions = [
-        '🧑', '👦', '👧', '👨', '👩', '🧔',
-        '👱', '🧑‍🦱', '🧑‍🦰', '🧑‍🦳', '👳', '🧕'
-      ];
-
-      const colorOptions = [
-        { id: 'neon',   label: 'Verde',   gradient: 'linear-gradient(145deg, rgba(57,255,20,0.5), rgba(57,255,20,0.15))', border: '#39ff14' },
-        { id: 'purple', label: 'Roxo',    gradient: 'linear-gradient(145deg, rgba(124,58,237,0.6), rgba(124,58,237,0.2))', border: '#7c3aed' },
-        { id: 'blue',   label: 'Azul',    gradient: 'linear-gradient(145deg, rgba(56,189,248,0.5), rgba(56,189,248,0.15))', border: '#38bdf8' },
-        { id: 'orange', label: 'Laranja', gradient: 'linear-gradient(145deg, rgba(251,146,60,0.5), rgba(251,146,60,0.15))',  border: '#fb923c' },
-        { id: 'pink',   label: 'Pink',    gradient: 'linear-gradient(145deg, rgba(244,114,182,0.5), rgba(244,114,182,0.15))', border: '#f472b6' }
-      ];
-
-      const avatarGrid = document.getElementById('avatarGrid');
-      const colorGrid = document.getElementById('colorGrid');
-      const avatarPreview = document.getElementById('avatarPreview');
-      const customizeConfirmButton = document.getElementById('customizeConfirmButton');
-
-      if (!avatarGrid || !colorGrid || !avatarPreview || !customizeConfirmButton) {
-        return;
-      }
-
-      function getSelectedColor() {
-        return colorOptions.find(c => c.id === playerAvatarColor) || colorOptions[0];
-      }
-
-      function syncSelectedAvatarButtons() {
-        const color = getSelectedColor();
-        avatarGrid.querySelectorAll('button').forEach(b => {
-          const selected = b.textContent === playerAvatar;
-          b.style.borderColor = selected ? color.border : 'rgba(255,255,255,0.1)';
-          b.style.background = selected ? 'rgba(255,255,255,0.12)' : 'rgba(255,255,255,0.06)';
-          b.style.transform = selected ? 'scale(1.08)' : 'scale(1)';
-        });
-      }
-
-      function syncSelectedColorButtons() {
-        colorGrid.querySelectorAll('button').forEach(b => {
-          const selected = b.dataset.colorId === playerAvatarColor;
-          const color = colorOptions.find(c => c.id === b.dataset.colorId) || colorOptions[0];
-          b.style.borderColor = selected ? color.border : 'transparent';
-          b.style.transform = selected ? 'scale(1.08)' : 'scale(1)';
-        });
-      }
-
-      function updatePreview() {
-        const color = getSelectedColor();
-        avatarPreview.textContent = playerAvatar;
-        avatarPreview.style.background = color.gradient;
-        avatarPreview.style.borderColor = color.border;
-        avatarPreview.style.boxShadow = `0 0 24px ${color.border}55`;
-      }
-
-      // Renderizar avatares
-      avatarGrid.innerHTML = '';
-      avatarOptions.forEach(emoji => {
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.textContent = emoji;
-        btn.style.cssText = `
-          width: 100%; aspect-ratio: 1;
-          display: grid; place-items: center;
-          font-size: 1.6rem;
-          border-radius: 14px;
-          border: 2px solid rgba(255,255,255,0.1);
-          background: rgba(255,255,255,0.06);
-          cursor: pointer;
-          transition: border-color 220ms ease, background 220ms ease, transform 220ms ease;
-        `;
-        btn.addEventListener('click', () => {
-          playerAvatar = emoji;
-          syncSelectedAvatarButtons();
-          updatePreview();
-          updateTopBarAvatar();
-          updateHomeAvatar();
-          saveSession();
-        });
-        avatarGrid.appendChild(btn);
-      });
-
-      // Renderizar cores
-      colorGrid.innerHTML = '';
-      colorOptions.forEach(color => {
-        const btn = document.createElement('button');
-        btn.type = 'button';
-        btn.dataset.colorId = color.id;
-        btn.setAttribute('aria-label', color.label);
-        btn.style.cssText = `
-          width: 100%; aspect-ratio: 1;
-          border-radius: 14px;
-          border: 2px solid ${playerAvatarColor === color.id ? color.border : 'transparent'};
-          background: ${color.gradient};
-          cursor: pointer;
-          transition: border-color 220ms ease, transform 220ms ease;
-          transform: ${playerAvatarColor === color.id ? 'scale(1.08)' : 'scale(1)'};
-        `;
-        btn.addEventListener('click', () => {
-          playerAvatarColor = color.id;
-          syncSelectedColorButtons();
-          syncSelectedAvatarButtons();
-          updatePreview();
-          updateTopBarAvatar();
-          updateHomeAvatar();
-          saveSession();
-        });
-        colorGrid.appendChild(btn);
-      });
-
-      syncSelectedAvatarButtons();
-      syncSelectedColorButtons();
-      updatePreview();
-
-      customizeConfirmButton.addEventListener('click', () => {
-        updateTopBarAvatar();
-        updateHomeAvatar();
-        showScreen('welcome');
-      });
-    }
 
 
     /* =========================================================
