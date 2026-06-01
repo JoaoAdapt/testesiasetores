@@ -3389,7 +3389,7 @@
         <div class="screen-card traffic-screen-card">
           <div class="screen-content">
             <div class="traffic-avatar" aria-hidden="true">
-              👩‍🎨
+              🧑‍🎨
             </div>
 
             <div class="challenge-meta">
@@ -3551,7 +3551,7 @@
         <div class="screen-card traffic-screen-card">
           <div class="screen-content">
             <div class="traffic-avatar" aria-hidden="true">
-              👩‍🎨
+              🧑‍🎨
             </div>
 
             <div class="challenge-meta">
@@ -5024,8 +5024,8 @@
 
     function initCustomizeScreen() {
       const avatarOptions = [
-        '🧑', '👦', '👧', '👨', '👩', '🧔',
-        '👱', '🧑‍🦱', '🧑‍🦰', '🧑‍🦳', '👳', '🧕'
+        '🧑‍🚀', '🦊', '🐼', '🦁', '🐸', '🤖',
+        '👾', '🦄', '🐺', '🧙', '🦅', '🐯'
       ];
 
       const colorOptions = [
@@ -5206,7 +5206,6 @@
     const progressText = document.getElementById("progressText");
     const sectorNotice = document.getElementById("sectorNotice");
     const confettiLayer = document.getElementById("confettiLayer");
-    const finalSubtitle = document.getElementById("finalSubtitle");
     const finalScoreText = document.getElementById("finalScoreText");
     const playAgainButton = document.getElementById("playAgainButton");
     const playAgainFromEasterButton = document.getElementById("playAgainFromEasterButton");
@@ -5516,17 +5515,6 @@
       }, 2000);
     }
 
-    function getFinalSubtitle() {
-      if (score >= 28) {
-        return "Você nasceu pra isso. IA na veia.";
-      }
-
-      if (score >= 20) {
-        return "Muito bom. Você sabe usar as ferramentas certas.";
-      }
-
-      return "Boa tentativa. Com prática você chega lá.";
-    }
 
     function getPlayerTitle() {
       const sorted = Object.entries(sectorScores).sort((a, b) => b[1] - a[1]);
