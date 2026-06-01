@@ -733,6 +733,35 @@
       font-size: 4rem;
     }
 
+
+    .traffic-avatar.is-reacting {
+      transition: transform 200ms ease, filter 200ms ease;
+    }
+
+    @keyframes avatarSuccess {
+      0%   { transform: scale(1) rotate(0deg); }
+      30%  { transform: scale(1.18) rotate(-6deg); }
+      60%  { transform: scale(1.22) rotate(5deg); }
+      100% { transform: scale(1) rotate(0deg); }
+    }
+
+    @keyframes avatarFailure {
+      0%   { transform: translateX(0) scale(1); }
+      20%  { transform: translateX(-10px) scale(0.96); }
+      40%  { transform: translateX(10px) scale(0.96); }
+      60%  { transform: translateX(-6px) scale(0.98); }
+      80%  { transform: translateX(6px) scale(0.98); }
+      100% { transform: translateX(0) scale(1); }
+    }
+
+    .traffic-avatar.react-success {
+      animation: avatarSuccess 0.6s ease both;
+    }
+
+    .traffic-avatar.react-failure {
+      animation: avatarFailure 0.6s ease both;
+    }
+
     .challenge-meta {
       display: inline-flex;
       align-items: center;
@@ -1812,8 +1841,8 @@
             </div>
 
             <div class="challenge-meta">
-              <span aria-hidden="true">🎯</span>
-              Desafio 2 de 2
+              <span aria-hidden="true">⚠️</span>
+              Desafio 2 de 2 — IA mal usada
             </div>
 
 
@@ -1827,9 +1856,7 @@
 
             <div class="challenge-box">
               <p>
-                
-                O CPC da campanha subiu 40% em 3 semanas. O cliente cobra explicação agora. Thomas tem 1
-                hora. O que ele faz?
+                Thomas pediu pra IA analisar o CPC da campanha, mas mandou o seguinte prompt: "analisa aí". A IA gerou um texto genérico sem dados reais. O cliente cobra explicação em 1 hora. O que Thomas faz agora?
               
               </p>
             </div>
@@ -1843,7 +1870,7 @@
                 data-scenario-id="trafego-c2"
                 data-choice-correct="false"
               >
-                A — Responde que está investigando e pede 24h sem olhar os dados
+                Apresenta o texto genérico da IA pro cliente mesmo assim
               </button>
 
               <button
@@ -1853,7 +1880,7 @@
                 data-scenario-id="trafego-c2"
                 data-choice-correct="true"
               >
-                B — Levanta os dados do período, identifica as variações e estrutura uma resposta clara antes de falar com o cliente
+                Refaz o prompt com contexto real — período, métricas e objetivo — e gera uma análise útil
               </button>
 
               <button
@@ -1863,7 +1890,7 @@
                 data-scenario-id="trafego-c2"
                 data-choice-correct="false"
               >
-                C — Abre o gerenciador de anúncios e começa a olhar manualmente cada conjunto
+                Descarta a IA e faz a análise manual do zero em 1 hora
               </button>
 
               <button
@@ -1873,7 +1900,7 @@
                 data-scenario-id="trafego-c2"
                 data-choice-correct="false"
               >
-                D — Culpa sazonalidade sem verificar os dados
+                Pede mais prazo pro cliente alegando instabilidade na plataforma
               </button>
             </div>
           </div>
@@ -1896,13 +1923,11 @@
             </div>
 
             <h2 id="trafficScenarioTwoSuccessTitle" class="result-title">
-              Missão cumprida!
+              Prompt certo, resultado certo.
             </h2>
 
             <p class="result-text">
-              Thomas chegou na reunião com dados, argumentos e clareza. O cliente ficou impressionado.
-              Resposta embasada = confiança do cliente + autoridade no trabalho.
-              IA bem usada é diferencial competitivo.
+              Thomas não jogou fora a IA — ele melhorou o prompt. Em 10 minutos tinha uma análise real com dados, variações e conclusão. IA ruim não é culpa da ferramenta. É culpa do prompt. Quem sabe refinar prompts transforma ferramenta mediana em resultado excelente.
             </p>
 
             <button
@@ -1932,13 +1957,11 @@
             </div>
 
             <h2 id="trafficScenarioTwoFailureTitle" class="result-title">
-              Quase...
+              IA não faz milagre com prompt ruim.
             </h2>
 
             <p class="result-text">
-              
-              Parece uma ação lógica, mas não é a mais eficiente. Com 1 hora disponível, a IA cruzaria os
-              dados em minutos e Thomas chegaria na reunião com argumentos reais — não com suposições.
+              Apresentar texto genérico passa descrédito. Abandonar a IA por isso desperdiça potencial. Pedir mais prazo sem justificativa técnica real corroí a confiança. O problema não era a IA — era o prompt. Um contexto claro teria gerado a análise em minutos.
             
             </p>
 
@@ -3238,8 +3261,8 @@
             </div>
 
             <div class="challenge-meta">
-              <span aria-hidden="true">✍️</span>
-              Desafio 1 de 2
+              <span aria-hidden="true">⚠️</span>
+              Desafio 1 de 2 — IA mal usada
             </div>
 
 
@@ -3253,9 +3276,7 @@
 
             <div class="challenge-box">
               <p>
-                
-                Gian precisa criar 10 variações de headline para um anúncio de e-commerce. O cliente quer
-                hoje. O que ele faz?
+                Gian pediu pra IA criar 10 headlines. O prompt foi: "cria headlines pra anúncio". A IA entregou 10 frases genéricas sem identidade, público ou produto. O cliente vai receber em 30 minutos. O que Gian faz?
               
               </p>
             </div>
@@ -3269,7 +3290,7 @@
                 data-scenario-id="copy-c1"
                 data-choice-correct="false"
               >
-                A — Escreve 3 variações bem elaboradas e justifica a qualidade sobre quantidade
+                Entrega as 10 headlines genéricas e torce pra passar
               </button>
 
               <button
@@ -3279,7 +3300,7 @@
                 data-scenario-id="copy-c1"
                 data-choice-correct="false"
               >
-                B — Pede extensão de prazo para fazer as 10 com mais qualidade
+                Descarta tudo e escreve as 10 do zero nos próximos 30 minutos
               </button>
 
               <button
@@ -3289,7 +3310,7 @@
                 data-scenario-id="copy-c1"
                 data-choice-correct="true"
               >
-                C — Usa contexto do produto, público e objetivo para gerar e refinar as 10 variações de forma estruturada
+                Refaz o prompt com produto, público, tom e objetivo — e regenera as headlines em 5 minutos
               </button>
 
               <button
@@ -3299,7 +3320,7 @@
                 data-scenario-id="copy-c1"
                 data-choice-correct="false"
               >
-                D — Copia headlines de anúncios concorrentes e adapta o texto
+                Pede extensão de prazo e explica que a IA não funcionou bem
               </button>
             </div>
           </div>
@@ -3322,13 +3343,11 @@
             </div>
 
             <h2 id="copyScenarioOneSuccessTitle" class="result-title">
-              Boa decisão!
+              Prompt com contexto, headline com força.
             </h2>
 
             <p class="result-text">
-              10 headlines prontas, variadas e alinhadas com o público. O cliente aprovou na
-              primeira rodada. IA não substitui o olhar criativo — ela acelera o processo para que
-              você possa focar no que realmente importa: a estratégia.
+              Gian não culpou a ferramenta. Ele deu o contexto que faltava: produto específico, público-alvo, tom da marca e objetivo do anúncio. A IA gerou 10 headlines com identidade em 5 minutos. O cliente aprovou na primeira rodada. Ferramenta certa + prompt certo = resultado que impressiona.
             </p>
 
             <button
@@ -3359,14 +3378,11 @@
             </div>
 
             <h2 id="copyScenarioOneFailureTitle" class="result-title">
-              Não foi dessa vez.
+              Lixo entra, lixo sai.
             </h2>
 
             <p class="result-text">
-              
-              Parece defensável — mas não é o que o cliente pediu. 3 variações limitam o teste A/B.
-              Prorrogação em entrega simples passa insegurança. Copiar concorrente é arriscado e
-              preguiçoso. IA com contexto certo entrega 10 variações únicas e alinhadas em minutos.
+              Entregar genérico é pior que não entregar — o cliente percebe. Fazer do zero em 30 minutos sob pressão gera resultado pior ainda. Culpar a IA sem tentar melhorar o prompt é o erro mais comum — e mais evitável. IA sem contexto gera resultado sem contexto. Isso não é falha da ferramenta.
             
             </p>
 
@@ -4173,6 +4189,85 @@
         </div>
       </section>
 
+
+      <!-- =========================================================
+        MODO CHEFE — CENÁRIO FINAL SURPRESA
+      ========================================================== -->
+      <section id="bossScreen" class="screen" aria-labelledby="bossTitle">
+        <div class="screen-card traffic-screen-card">
+          <div class="screen-content">
+            <div class="traffic-avatar" aria-hidden="true" id="bossAvatar">😤</div>
+
+            <div class="challenge-meta" style="color: var(--danger);">
+              <span aria-hidden="true">👑</span>
+              Modo Chefe — Desafio Final
+            </div>
+
+            <div class="eyebrow" style="border-color: rgba(251,113,133,0.3); background: rgba(251,113,133,0.1); color: var(--danger); margin: 0 auto 16px; display:flex;">
+              <span aria-hidden="true">⚡</span>
+              Vale pontuação dobrada
+            </div>
+
+            <h2 id="bossTitle" class="traffic-title">Reunião com o Cliente</h2>
+
+            <div class="challenge-box" style="border-color: rgba(251,113,133,0.28); background: linear-gradient(145deg, rgba(251,113,133,0.12), rgba(255,255,255,0.04));">
+              <p>
+                Um cliente estratégico manda mensagem às 18h de uma sexta-feira: "Preciso de um relatório completo dos últimos 6 meses, análise de concorrência, proposta de ajuste de verba e nova estratégia para o próximo trimestre. Para segunda às 9h." Você é o responsável. O que você faz?
+              </p>
+            </div>
+
+            <div class="choice-stack" aria-label="Escolhas do Modo Chefe" id="bossChoiceStack">
+              <button class="choice-button" type="button" data-scenario-id="boss" data-choice-correct="false" id="bossChoiceA">
+                A — Responde que vai tentar e passa o fim de semana inteiro trabalhando manualmente
+              </button>
+              <button class="choice-button" type="button" data-scenario-id="boss" data-choice-correct="false" id="bossChoiceB">
+                B — Pede para remarcar a entrega para terça, alegando que o prazo é inviável
+              </button>
+              <button class="choice-button" type="button" data-scenario-id="boss" data-choice-correct="true" id="bossChoiceC">
+                C — Confirma a entrega, usa IA para estruturar cada documento, divide as tarefas por bloco e entrega tudo no domingo à noite para revisar com calma na segunda cedo
+              </button>
+              <button class="choice-button" type="button" data-scenario-id="boss" data-choice-correct="false" id="bossChoiceD">
+                D — Entrega só o relatório de performance e avisa que o restante fica para a semana
+              </button>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tela de sucesso do Modo Chefe -->
+      <section id="bossSuccessScreen" class="screen" aria-labelledby="bossSuccessTitle">
+        <div class="screen-card result-card">
+          <div class="screen-content">
+            <div class="result-icon is-success" aria-hidden="true" style="font-size:3.6rem;">👑</div>
+            <h2 id="bossSuccessTitle" class="result-title">Modo Chefe Derrotado!</h2>
+            <p class="result-text">
+              Você não entrou em pânico, não pediu prazo e não trabalhou no escuro. Confirmou, estruturou, dividiu e entregou. Isso é o que separa um profissional de alto impacto dos demais. IA não faz o trabalho — ela multiplica a capacidade de quem sabe usá-la. Você provou que sabe.
+            </p>
+            <div style="margin: 16px 0; padding: 14px; border-radius: var(--radius-md); background: rgba(251,113,133,0.1); border: 1px solid rgba(251,113,133,0.3); color: var(--danger); font-weight: 900; font-size: 1rem; text-align:center;">
+              ⚡ +<span id="bossPointsEarned">4</span> pontos bônus
+            </div>
+            <button id="bossSuccessToFinalButton" class="primary-button" type="button">
+              <span>Ver Resultado Final</span>
+              <span aria-hidden="true">🏆</span>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- Tela de fracasso do Modo Chefe -->
+      <section id="bossFailureScreen" class="screen" aria-labelledby="bossFailureTitle">
+        <div class="screen-card result-card">
+          <div class="screen-content">
+            <div class="result-icon is-failure" aria-hidden="true">💀</div>
+            <h2 id="bossFailureTitle" class="result-title">O chefe ganhou dessa vez.</h2>
+            <p class="result-text">
+              Pedido inviável não existe quando você tem IA e método. Trabalhar o fim de semana no escuro é sacrifício sem estratégia. Pedir prazo sem oferecer alternativa passa fraqueza. Entregar pela metade é pior que não entregar. Quem domina IA não vê prazo impossível — vê um processo a ser otimizado.
+            </p>
+            <button id="bossRetryButton" class="danger-button" type="button">Tentar de novo</button>
+          </div>
+        </div>
+      </section>
+
       <!-- =========================================================
         TELA FINAL — RESULTADO GERAL
       ========================================================== -->
@@ -4192,9 +4287,18 @@
               Missão Concluída!
             </h2>
 
-            <p id="finalSubtitle" class="final-subtitle">
-              Você nasceu pra isso. IA na veia.
-            </p>
+            <div id="playerTitleCard" style="
+              margin: 0 0 18px;
+              padding: 16px;
+              border-radius: var(--radius-md);
+              border: 1px solid rgba(255,255,255,0.1);
+              background: rgba(255,255,255,0.055);
+              text-align:center;
+            ">
+              <div id="playerTitleEmoji" style="font-size:2.4rem; margin-bottom:8px;"></div>
+              <p id="playerTitleText" style="font-family:'Space Grotesk',sans-serif; font-size:1.25rem; font-weight:800; color:var(--text); letter-spacing:-0.03em; margin-bottom:6px;"></p>
+              <p id="playerTitleDesc" class="final-subtitle" style="font-size:0.92rem;"></p>
+            </div>
 
             <div id="finalScoreText" class="final-score">
               Você acertou 0 de 32 pontos
@@ -4402,8 +4506,9 @@
     const completedSectors = new Set();
     let sectorInProgress = null;
     const totalScenarios = sectors.length * 2;
-    const maxScore = totalScenarios * 2;
+    const maxScore = (totalScenarios * 2) + 4;
     const scenarioAttempts = {};
+    const sectorScores = {};
     let sectorNoticeTimeout = null;
     let playerName = "";
     let playerAge = "";
@@ -4430,6 +4535,7 @@
           sectorInProgress,
           completedSectors: [...completedSectors],
           scenarioAttempts: { ...scenarioAttempts },
+          sectorScores: { ...sectorScores },
           currentScreen: getCurrentScreenId()
         };
         localStorage.setItem('missaoAdaptSession', JSON.stringify(session));
@@ -4473,6 +4579,12 @@
         if (s.scenarioAttempts && typeof s.scenarioAttempts === 'object') {
           Object.assign(scenarioAttempts, s.scenarioAttempts);
         }
+        Object.keys(sectorScores).forEach((sectorId) => {
+          delete sectorScores[sectorId];
+        });
+        if (s.sectorScores && typeof s.sectorScores === 'object') {
+          Object.assign(sectorScores, s.sectorScores);
+        }
         updateScoreDisplay();
         updateProgress();
         renderSectorCards();
@@ -4496,7 +4608,8 @@
           'designScenarioOneSuccess', 'designScenarioOneFailure',
           'designScenarioTwoSuccess', 'designScenarioTwoFailure',
           'audiovisualScenarioOneSuccess', 'audiovisualScenarioOneFailure',
-          'audiovisualScenarioTwoSuccess', 'audiovisualScenarioTwoFailure'
+          'audiovisualScenarioTwoSuccess', 'audiovisualScenarioTwoFailure',
+          'bossSuccess', 'bossFailure'
         ];
         const scenarioMap = {
           'trafficScenarioOneSuccess': 'trafficScenarioOne',
@@ -4530,7 +4643,9 @@
           'audiovisualScenarioOneSuccess': 'audiovisualScenarioOne',
           'audiovisualScenarioOneFailure': 'audiovisualScenarioOne',
           'audiovisualScenarioTwoSuccess': 'audiovisualScenarioTwo',
-          'audiovisualScenarioTwoFailure': 'audiovisualScenarioTwo'
+          'audiovisualScenarioTwoFailure': 'audiovisualScenarioTwo',
+          'bossSuccess': 'boss',
+          'bossFailure': 'boss'
         };
         const resolvedTarget = scenarioResultScreens.includes(target)
           ? scenarioMap[target]
@@ -4762,6 +4877,9 @@
       audiovisualScenarioTwo: document.getElementById("audiovisualScenarioTwoScreen"),
       audiovisualScenarioTwoSuccess: document.getElementById("audiovisualScenarioTwoSuccessScreen"),
       audiovisualScenarioTwoFailure: document.getElementById("audiovisualScenarioTwoFailureScreen"),
+      boss: document.getElementById("bossScreen"),
+      bossSuccess: document.getElementById("bossSuccessScreen"),
+      bossFailure: document.getElementById("bossFailureScreen"),
       final: document.getElementById("screen-final"),
       easterEgg: document.getElementById("screen-easter-egg"),
       ranking: document.getElementById("screen-ranking")
@@ -4909,6 +5027,9 @@
       }
 
       score += points;
+      const sectorKey = scenarioId.split('-c')[0];
+      if (!sectorScores[sectorKey]) sectorScores[sectorKey] = 0;
+      sectorScores[sectorKey] += points;
       updateScoreDisplay();
       triggerSuccessFeedback();
     }
@@ -5095,9 +5216,83 @@
       return "Boa tentativa. Com prática você chega lá.";
     }
 
+    function getPlayerTitle() {
+      const sorted = Object.entries(sectorScores).sort((a, b) => b[1] - a[1]);
+      const topSector = sorted[0] ? sorted[0][0] : null;
+      const totalMax = maxScore;
+      const pct = score / totalMax;
+
+      const titleMap = {
+        'trafego': { title: 'Gestor de Tráfego em Formação', emoji: '🎯', description: 'Você dominou dados e campanhas. Sua mente analítica é seu diferencial.' },
+        'rh':      { title: 'Talent Scout do Futuro', emoji: '👥', description: 'Você sabe encontrar pessoas certas para os lugares certos.' },
+        'comercial': { title: 'Closer em Ascensão', emoji: '💼', description: 'Você fecha com estratégia, não com improviso.' },
+        'sdr':     { title: 'Caçador de Leads Nível 2', emoji: '📞', description: 'Você qualifica antes de ligar. Isso é o que separa os bons dos ótimos.' },
+        'cs':      { title: 'Especialista em Relacionamento', emoji: '🤝', description: 'Você preserva clientes onde outros perderiam.' },
+        'copy':    { title: 'Arquiteto de Palavras', emoji: '✍️', description: 'Você entende que copy certo no momento certo vale ouro.' },
+        'design':  { title: 'Diretor de Arte em Formação', emoji: '🎨', description: 'Você transforma briefing em direção. Isso é raro.' },
+        'audiovisual': { title: 'Produtor de Conteúdo Nato', emoji: '🎬', description: 'Roteiro, ritmo, resultado. Você pensa em vídeo.' }
+      };
+
+      if (pct >= 0.875) {
+        return { title: 'Estrategista Digital', emoji: '⚡', description: 'Pontuação máxima. Você dominou todos os setores. A Adapt te quer no time.' };
+      }
+      if (pct < 0.4) {
+        return { title: 'Aprendiz em Recuperação', emoji: '📚', description: 'Cada erro é uma aula. Você sabe mais agora do que quando começou.' };
+      }
+      return titleMap[topSector] || { title: 'Profissional em Formação', emoji: '🚀', description: 'Você está no caminho certo.' };
+    }
+
     function updateFinalScreen() {
-      finalSubtitle.textContent = getFinalSubtitle();
+      const titleData = getPlayerTitle();
+      playerTitle = titleData.title;
+      document.getElementById('playerTitleEmoji').textContent = titleData.emoji;
+      document.getElementById('playerTitleText').textContent = titleData.title;
+      document.getElementById('playerTitleDesc').textContent = titleData.description;
       finalScoreText.textContent = `Você acertou ${formatScore(score)} de ${maxScore} pontos`;
+    }
+
+    function startBossMode() {
+      showScreen('boss');
+    }
+
+    function showBossSuccess() {
+      const attempts = scenarioAttempts['boss'] || 1;
+      let points = attempts === 1 ? 4 : attempts === 2 ? 2 : 1;
+      score += points;
+      updateScoreDisplay();
+      triggerSuccessFeedback();
+      document.getElementById('bossPointsEarned').textContent = points;
+      showScreen('bossSuccess');
+    }
+
+    function showBossFailure() {
+      showScreen('bossFailure');
+    }
+
+    function showBossModeIntro() {
+      // Mostrar notificação de Modo Chefe desbloqueado antes de entrar
+      const intro = document.createElement('div');
+      intro.style.cssText = `
+        position: fixed; inset: 0; z-index: 200;
+        display: flex; flex-direction: column;
+        align-items: center; justify-content: center; gap: 16px;
+        background: rgba(13,13,13,0.97);
+        animation: fadeIn 400ms ease both;
+      `;
+      intro.innerHTML = `
+        <div style="font-size:4rem; animation: trophyPulse 1s ease-in-out infinite;">👑</div>
+        <p style="font-family:'Space Grotesk',sans-serif; font-size:1.8rem; font-weight:800; color:var(--danger); letter-spacing:-0.04em; text-align:center;">Modo Chefe<br>Desbloqueado</p>
+        <p style="color:var(--muted); font-size:1rem; font-weight:700; text-align:center; max-width:260px;">Você completou todos os setores.<br>Um último desafio te espera.</p>
+      `;
+      document.body.appendChild(intro);
+      window.setTimeout(() => {
+        intro.style.opacity = '0';
+        intro.style.transition = 'opacity 400ms ease';
+        window.setTimeout(() => {
+          document.body.removeChild(intro);
+          startBossMode();
+        }, 400);
+      }, 2500);
     }
 
     function showFinalScreen() {
@@ -5124,7 +5319,10 @@
       renderSectorCards();
 
       if (completedSectors.size === sectors.length) {
-        showFinalScreen();
+        // Em vez de ir direto para a tela final, acionar o Modo Chefe
+        window.setTimeout(() => {
+          showBossModeIntro();
+        }, 600);
         return;
       }
 
@@ -5146,6 +5344,9 @@
       resultSaved = false;
       completedSectors.clear();
       resetScenarioAttempts();
+      Object.keys(sectorScores).forEach((sectorId) => {
+        delete sectorScores[sectorId];
+      });
       sectorNotice.classList.remove("is-visible");
       confettiLayer.innerHTML = "";
       rankingList.innerHTML = "";
@@ -5447,18 +5648,27 @@
         "#f4f4f5"
       );
 
+      drawCenteredText(
+        context,
+        playerTitle || 'Profissional em Formação',
+        centerX,
+        300,
+        "600 16px 'Space Grotesk', Arial, sans-serif",
+        "rgba(57, 255, 20, 0.8)"
+      );
+
       context.strokeStyle = "rgba(57, 255, 20, 0.4)";
       context.lineWidth = 1;
       context.beginPath();
-      context.moveTo(centerX - 100, 320);
-      context.lineTo(centerX + 100, 320);
+      context.moveTo(centerX - 100, 340);
+      context.lineTo(centerX + 100, 340);
       context.stroke();
 
       drawCenteredText(
         context,
         "por completar a Missão Adapt com",
         centerX,
-        360,
+        380,
         "400 16px Inter, Arial, sans-serif",
         "#a1a1aa"
       );
@@ -5467,7 +5677,7 @@
         context,
         `${formatScore(score)} de ${maxScore} pontos`,
         centerX,
-        410,
+        430,
         "700 36px 'Space Grotesk', Arial, sans-serif",
         "#39ff14"
       );
@@ -5476,7 +5686,7 @@
         context,
         "Missão Adapt · Adapt Estratégias Digitais · 2026",
         centerX,
-        460,
+        480,
         "400 13px Inter, Arial, sans-serif",
         "rgba(161, 161, 170, 0.6)"
       );
@@ -5485,7 +5695,7 @@
         context,
         "adaptdigital.com.br",
         centerX,
-        530,
+        550,
         "700 14px 'Space Grotesk', Arial, sans-serif",
         "rgba(57, 255, 20, 0.7)"
       );
@@ -5920,6 +6130,18 @@
       registerAttempt(scenarioId);
       revealScenarioChoices(selectedButton);
 
+      const currentScreen = Object.values(screens).find(s => s.classList.contains('is-active'));
+      if (currentScreen) {
+        const avatar = currentScreen.querySelector('.traffic-avatar');
+        if (avatar) {
+          avatar.classList.add('is-reacting');
+          avatar.classList.add(isCorrect ? 'react-success' : 'react-failure');
+          setTimeout(() => {
+            avatar.classList.remove('is-reacting', 'react-success', 'react-failure');
+          }, 700);
+        }
+      }
+
       window.setTimeout(() => {
         if (isCorrect) {
           actions.success();
@@ -5949,7 +6171,8 @@
       "design-c1": { success: showDesignScenarioOneSuccess, failure: showDesignScenarioOneFailure },
       "design-c2": { success: showDesignScenarioTwoSuccess, failure: showDesignScenarioTwoFailure },
       "audiovisual-c1": { success: showAudiovisualScenarioOneSuccess, failure: showAudiovisualScenarioOneFailure },
-      "audiovisual-c2": { success: showAudiovisualScenarioTwoSuccess, failure: showAudiovisualScenarioTwoFailure }
+      "audiovisual-c2": { success: showAudiovisualScenarioTwoSuccess, failure: showAudiovisualScenarioTwoFailure },
+      "boss": { success: showBossSuccess, failure: showBossFailure }
     };
 
     startButton.addEventListener("click", () => {
@@ -5983,6 +6206,14 @@
 
     backFromRankingButton.addEventListener("click", () => {
       showScreen("final");
+    });
+
+    document.getElementById('bossSuccessToFinalButton').addEventListener('click', () => {
+      showFinalScreen();
+    });
+
+    document.getElementById('bossRetryButton').addEventListener('click', () => {
+      showScreen('boss');
     });
 
     document.querySelectorAll(".choice-button[data-scenario-id][data-choice-correct]").forEach((button) => {
