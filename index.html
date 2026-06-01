@@ -922,6 +922,38 @@
       font-weight: 600;
     }
 
+
+
+    .character-quote {
+      margin-top: 20px;
+      padding: 14px 16px;
+      border-radius: var(--radius-md);
+      border-left: 3px solid var(--neon);
+      background: rgba(57, 255, 20, 0.06);
+      color: var(--text);
+      font-size: 0.95rem;
+      font-weight: 700;
+      line-height: 1.45;
+      font-style: italic;
+      text-align: left;
+    }
+
+    .character-quote.is-failure {
+      border-left-color: var(--danger);
+      background: rgba(251, 113, 133, 0.06);
+    }
+
+    .character-quote-name {
+      display: block;
+      margin-top: 8px;
+      font-size: 0.78rem;
+      font-weight: 800;
+      font-style: normal;
+      color: var(--muted);
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+    }
+
     .danger-button {
       width: 100%;
       min-height: 56px;
@@ -1775,6 +1807,11 @@
               Quem sabe usar IA trabalha mais rápido e entrega mais valor.
             </p>
 
+            <p class="character-quote">
+              "Exatamente assim. Dados não mentem — e agora eu tenho todos eles."
+              <span class="character-quote-name">— Thomas, Tráfego Pago</span>
+            </p>
+
             <button
               id="goToTrafficScenarioTwoButton"
               class="primary-button"
@@ -1812,6 +1849,11 @@
               dados reais — não de atalhos que parecem produtivos mas geram resultado superficial. IA com
               prompt certo teria cruzado tudo em minutos.
             
+            </p>
+
+            <p class="character-quote is-failure">
+              "Já confiei na memória uma vez. Só uma vez."
+              <span class="character-quote-name">— Thomas, Tráfego Pago</span>
             </p>
 
             <button
@@ -1930,6 +1972,11 @@
               Thomas não jogou fora a IA — ele melhorou o prompt. Em 10 minutos tinha uma análise real com dados, variações e conclusão. IA ruim não é culpa da ferramenta. É culpa do prompt. Quem sabe refinar prompts transforma ferramenta mediana em resultado excelente.
             </p>
 
+            <p class="character-quote">
+              "Cliente satisfeito não pergunta como você chegou lá tão rápido. Só agradece."
+              <span class="character-quote-name">— Thomas, Tráfego Pago</span>
+            </p>
+
             <button
               id="backToSectorsFromTrafficButton"
               class="primary-button"
@@ -1963,6 +2010,11 @@
             <p class="result-text">
               Apresentar texto genérico passa descrédito. Abandonar a IA por isso desperdiça potencial. Pedir mais prazo sem justificativa técnica real corroí a confiança. O problema não era a IA — era o prompt. Um contexto claro teria gerado a análise em minutos.
             
+            </p>
+
+            <p class="character-quote is-failure">
+              "Suposição em reunião de dados é o caminho mais rápido pra perder credibilidade."
+              <span class="character-quote-name">— Thomas, Tráfego Pago</span>
             </p>
 
             <button
@@ -2086,6 +2138,11 @@
               transforma 4 horas em 45 minutos quando você sabe usar.
             </p>
 
+            <p class="character-quote">
+              "Cinco vagas em 45 minutos. Ainda tive tempo de tomar café."
+              <span class="character-quote-name">— Luana, RH</span>
+            </p>
+
             <button
               id="goToHrScenarioTwoButton"
               class="primary-button"
@@ -2123,6 +2180,11 @@
               escopo atraem perfis errados e sobrecarregam outros times. IA com briefing correto resolve
               sem esses efeitos colaterais.
             
+            </p>
+
+            <p class="character-quote is-failure">
+              "Vaga genérica atrai candidato genérico. Simples assim."
+              <span class="character-quote-name">— Luana, RH</span>
             </p>
 
             <button
@@ -2245,6 +2307,11 @@
               seguinte. Critério + velocidade = processo seletivo melhor.
             </p>
 
+            <p class="character-quote">
+              "Com critério definido, cada currículo lido tem motivo de estar na pilha."
+              <span class="character-quote-name">— Luana, RH</span>
+            </p>
+
             <button
               id="backToSectorsFromHrButton"
               class="primary-button"
@@ -2281,6 +2348,11 @@
               perfis. Gestor sem critério padronizado gera inconsistência. Leitura manual de 80 currículos
               leva 5h+ e fadiga. IA resolve em 1 hora com critério documentado.
             
+            </p>
+
+            <p class="character-quote is-failure">
+              "Ler 80 currículos cansada é garantia de escolha errada no 60º."
+              <span class="character-quote-name">— Luana, RH</span>
             </p>
 
             <button
@@ -2403,6 +2475,11 @@
               avançou. Preparação com IA é vantagem competitiva real.
             </p>
 
+            <p class="character-quote">
+              "Chegar preparada numa reunião é chegar na frente antes de sentar."
+              <span class="character-quote-name">— Nadia, Comercial</span>
+            </p>
+
             <button
               id="goToCommercialScenarioTwoButton"
               class="primary-button"
@@ -2440,6 +2517,11 @@
               Remarcar passa insegurança. Improvisar sem contexto gera respostas genéricas. Só entender o
               segmento com profundidade garante credibilidade na reunião.
             
+            </p>
+
+            <p class="character-quote is-failure">
+              "Improvisar com cliente novo é apostar alto sem ver as cartas."
+              <span class="character-quote-name">— Nadia, Comercial</span>
             </p>
 
             <button
@@ -2562,6 +2644,11 @@
               toda vez.
             </p>
 
+            <p class="character-quote">
+              "Proposta que parece escrita pra ele fecha. Proposta genérica vai pra lixeira."
+              <span class="character-quote-name">— Nadia, Comercial</span>
+            </p>
+
             <button
               id="backToSectorsFromCommercialButton"
               class="primary-button"
@@ -2598,6 +2685,11 @@
               leva horas. Pedir mais prazo em lead quente esfria o interesse. IA com briefing correto
               entrega proposta personalizada em tempo hábil.
             
+            </p>
+
+            <p class="character-quote is-failure">
+              "Lead quente esfria rápido. Prazo perdido é oportunidade perdida."
+              <span class="character-quote-name">— Nadia, Comercial</span>
             </p>
 
             <button
@@ -2720,6 +2812,11 @@
               mediano de SDR de alto impacto.
             </p>
 
+            <p class="character-quote">
+              "Quatro reuniões agendadas e ainda sobrou energia pra fechar o dia bem."
+              <span class="character-quote-name">— Murilo, SDR</span>
+            </p>
+
             <button
               id="goToSdrScenarioTwoButton"
               class="primary-button"
@@ -2757,6 +2854,11 @@
               Passar sem qualificar sobrecarrega o comercial. Ligar em ordem desperdiça o dia. Priorização
               com critério claro é o que separa SDR mediano de SDR de alto impacto.
             
+            </p>
+
+            <p class="character-quote is-failure">
+              "Ligar pra todo mundo é trabalhar muito pra pouco resultado."
+              <span class="character-quote-name">— Murilo, SDR</span>
             </p>
 
             <button
@@ -2879,6 +2981,11 @@
               melhor — mesmo sem ser especialista no assunto.
             </p>
 
+            <p class="character-quote">
+              "Não precisei ser especialista. Precisei entender o suficiente pra responder bem."
+              <span class="character-quote-name">— Murilo, SDR</span>
+            </p>
+
             <button
               id="backToSectorsFromSdrButton"
               class="primary-button"
@@ -2915,6 +3022,11 @@
               Sem contexto o técnico não sabe o que responder. Ignorar a dúvida passa descaso. IA prepara
               Murilo para responder com clareza e manter o lead engajado.
             
+            </p>
+
+            <p class="character-quote is-failure">
+              "Lead sem resposta clara em 24h já tá conversando com outra agência."
+              <span class="character-quote-name">— Murilo, SDR</span>
             </p>
 
             <button
@@ -3037,6 +3149,11 @@
               importa tanto quanto o que você responde.
             </p>
 
+            <p class="character-quote">
+              "Respirei fundo, pedi ajuda pra estruturar e mandei a resposta certa."
+              <span class="character-quote-name">— Amanda, Atendimento</span>
+            </p>
+
             <button
               id="goToCsScenarioTwoButton"
               class="primary-button"
@@ -3074,6 +3191,11 @@
               de 24h parece descaso. Escalar sem tentar resolver primeiro expõe a equipe. Resposta
               empática com proposta concreta é o caminho que preserva o relacionamento.
             
+            </p>
+
+            <p class="character-quote is-failure">
+              "Resposta no impulso nunca resolve. Só adiciona mais fogo."
+              <span class="character-quote-name">— Amanda, Atendimento</span>
             </p>
 
             <button
@@ -3196,6 +3318,11 @@
               ao mesmo tempo.
             </p>
 
+            <p class="character-quote">
+              "Doze relatórios e ainda revisei cada um com calma. Processo é tudo."
+              <span class="character-quote-name">— Amanda, Atendimento</span>
+            </p>
+
             <button
               id="backToSectorsFromCsButton"
               class="primary-button"
@@ -3232,6 +3359,11 @@
               mês passado clientes percebem. Priorizar alguns prejudica os outros. Template com IA entrega
               12 relatórios personalizados em tempo hábil e com qualidade consistente.
             
+            </p>
+
+            <p class="character-quote is-failure">
+              "Cliente que percebe que o relatório é cópia do mês passado começa a questionar tudo."
+              <span class="character-quote-name">— Amanda, Atendimento</span>
             </p>
 
             <button
@@ -3350,6 +3482,11 @@
               Gian não culpou a ferramenta. Ele deu o contexto que faltava: produto específico, público-alvo, tom da marca e objetivo do anúncio. A IA gerou 10 headlines com identidade em 5 minutos. O cliente aprovou na primeira rodada. Ferramenta certa + prompt certo = resultado que impressiona.
             </p>
 
+            <p class="character-quote">
+              "Contexto certo no prompt é a diferença entre headline genérica e headline que converte."
+              <span class="character-quote-name">— Gian, Copy</span>
+            </p>
+
             <button
               id="goToCopyScenarioTwoButton"
               class="primary-button"
@@ -3384,6 +3521,11 @@
             <p class="result-text">
               Entregar genérico é pior que não entregar — o cliente percebe. Fazer do zero em 30 minutos sob pressão gera resultado pior ainda. Culpar a IA sem tentar melhorar o prompt é o erro mais comum — e mais evitável. IA sem contexto gera resultado sem contexto. Isso não é falha da ferramenta.
             
+            </p>
+
+            <p class="character-quote is-failure">
+              "Prompt ruim é lixo entrando. O que sai não é culpa da ferramenta."
+              <span class="character-quote-name">— Gian, Copy</span>
             </p>
 
             <button
@@ -3505,6 +3647,11 @@
               copy feito.
             </p>
 
+            <p class="character-quote">
+              "Pergunta certa antes de escrever vale mais que reescrever três vezes depois."
+              <span class="character-quote-name">— Gian, Copy</span>
+            </p>
+
             <button
               id="backToSectorsFromCopyButton"
               class="primary-button"
@@ -3541,6 +3688,11 @@
               conversa. Reunião para briefing simples é exagero. IA identifica exatamente o que está
               faltando e prepara Gian para um alinhamento rápido e cirúrgico.
             
+            </p>
+
+            <p class="character-quote is-failure">
+              "Adivinhar briefing é sempre aposta. E aposta em copy quase sempre perde."
+              <span class="character-quote-name">— Gian, Copy</span>
             </p>
 
             <button
@@ -3663,6 +3815,11 @@
               executar.
             </p>
 
+            <p class="character-quote">
+              "Designer que recebe briefing estruturado entrega na primeira. Sempre."
+              <span class="character-quote-name">— Fran, Design</span>
+            </p>
+
             <button
               id="goToDesignScenarioTwoButton"
               class="primary-button"
@@ -3701,6 +3858,11 @@
               insegurança. Briefing estruturado com IA dá ao designer tudo que ele precisa para executar
               certo de primeira.
             
+            </p>
+
+            <p class="character-quote is-failure">
+              "Anotação bagunçada vira retrabalho garantido. Sem exceção."
+              <span class="character-quote-name">— Fran, Design</span>
             </p>
 
             <button
@@ -3823,6 +3985,11 @@
               direção concreta — isso é o valor de saber usar IA.
             </p>
 
+            <p class="character-quote">
+              "Conceito vago virou direção clara. Isso é o meu trabalho antes do trabalho."
+              <span class="character-quote-name">— Fran, Design</span>
+            </p>
+
             <button
               id="backToSectorsFromDesignButton"
               class="primary-button"
@@ -3859,6 +4026,11 @@
               Concorrente como referência pode gerar cópia. Esperar o cliente atrasa o processo. IA
               transforma conceito subjetivo em direção visual concreta que o designer consegue executar.
             
+            </p>
+
+            <p class="character-quote is-failure">
+              "'Moderno e jovem' sem referência concreta é bilhete de ida pro retrabalho."
+              <span class="character-quote-name">— Fran, Design</span>
             </p>
 
             <button
@@ -3981,6 +4153,11 @@
               e retrabalho em audiovisual é caro.
             </p>
 
+            <p class="character-quote">
+              "Roteiro validado antes de gravar é dia de gravação sem estresse."
+              <span class="character-quote-name">— Morgana, Audiovisual</span>
+            </p>
+
             <button
               id="goToAudiovisualScenarioTwoButton"
               class="primary-button"
@@ -4018,6 +4195,11 @@
               vira refilmagem. Roteiro genérico não captura a essência do cliente. IA com contexto certo
               gera roteiro específico, objetivo e validável antes da gravação.
             
+            </p>
+
+            <p class="character-quote is-failure">
+              "Improvisar roteiro de vídeo é garantir que você vai gravar tudo de novo."
+              <span class="character-quote-name">— Morgana, Audiovisual</span>
             </p>
 
             <button
@@ -4140,6 +4322,11 @@
               criatividade.
             </p>
 
+            <p class="character-quote">
+              "Quatro vídeos legendados em duas horas. Revisados. Publicados. Feito."
+              <span class="character-quote-name">— Morgana, Audiovisual</span>
+            </p>
+
             <button
               id="backToSectorsFromAudiovisualButton"
               class="primary-button"
@@ -4176,6 +4363,11 @@
               termos técnicos. Sem legenda prejudica acessibilidade e alcance. IA transcreve rápido e
               Morgana revisa com qualidade — sem perder o prazo nem a precisão.
             
+            </p>
+
+            <p class="character-quote is-failure">
+              "Legenda automática sem revisão é armadilha. Nomes errados, termos errados, cliente irritado."
+              <span class="character-quote-name">— Morgana, Audiovisual</span>
             </p>
 
             <button
@@ -4454,6 +4646,8 @@
   </div>
 
   <script>
+    const IS_DISPLAY_MODE = new URLSearchParams(window.location.search).get('mode') === 'display';
+
     /* =========================================================
       1. ESTADO GLOBAL DO JOGO
     ========================================================== */
@@ -4520,6 +4714,124 @@
 
     const supabaseUrl = "https://wmolvndzpputfqmkvzhl.supabase.co";
     const supabaseKey = "sb_publishable_LMqy3KTDEiIyHa5vPvdIhA_JcwiYORC";
+
+
+    function initDisplayMode() {
+      if (!IS_DISPLAY_MODE) return;
+
+      document.body.innerHTML = `
+        <div id="displayRoot" style="
+          min-height: 100svh;
+          background:
+            radial-gradient(circle at top left, rgba(57,255,20,0.12), transparent 34%),
+            radial-gradient(circle at bottom right, rgba(124,58,237,0.2), transparent 36%),
+            #0d0d0d;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          padding: 48px 40px;
+          font-family: 'Space Grotesk', sans-serif;
+          color: #f4f4f5;
+        ">
+          <div style="width:100%; max-width:900px;">
+
+            <div style="display:flex; align-items:center; justify-content:space-between; margin-bottom:48px;">
+              <div style="display:flex; align-items:center; gap:16px;">
+                <div style="width:52px;height:52px;display:grid;place-items:center;border-radius:16px;background:#39ff14;color:#0d0d0d;font-size:1.6rem;font-weight:900;box-shadow:0 0 28px rgba(57,255,20,0.4);">A</div>
+                <div>
+                  <p style="font-size:1.1rem;font-weight:800;letter-spacing:-0.03em;text-transform:uppercase;">Adapt Estratégias Digitais</p>
+                  <p style="font-size:0.9rem;color:#a1a1aa;font-weight:700;">Missão Adapt — Ranking ao Vivo</p>
+                </div>
+              </div>
+              <div id="displayLiveIndicator" style="display:flex;align-items:center;gap:8px;padding:8px 16px;border-radius:999px;border:1px solid rgba(57,255,20,0.3);background:rgba(57,255,20,0.08);">
+                <span style="width:8px;height:8px;border-radius:999px;background:#39ff14;box-shadow:0 0 10px #39ff14;animation:trophyPulse 1.2s ease-in-out infinite;display:block;"></span>
+                <span style="font-size:0.9rem;font-weight:800;color:#39ff14;">AO VIVO</span>
+              </div>
+            </div>
+
+            <div id="displayRankingList" style="display:grid;gap:14px;"></div>
+
+            <p id="displayStatus" style="text-align:center;color:#a1a1aa;font-size:1rem;font-weight:700;margin-top:32px;">Carregando ranking...</p>
+
+            <p style="text-align:center;color:rgba(161,161,170,0.4);font-size:0.8rem;font-weight:700;margin-top:48px;letter-spacing:0.04em;">ATUALIZA AUTOMATICAMENTE A CADA 10 SEGUNDOS · joaoadapt.github.io/setoresIA</p>
+          </div>
+        </div>
+      `;
+
+      loadDisplayRanking();
+      setInterval(loadDisplayRanking, 10000);
+    }
+
+    async function loadDisplayRanking() {
+      const supabaseUrl = 'https://wmolvndzpputfqmkvzhl.supabase.co';
+      const supabaseKey = 'sb_publishable_LMqy3KTDEiIyHa5vPvdIhA_JcwiYORC';
+
+      try {
+        const response = await fetch(
+          `${supabaseUrl}/rest/v1/players?select=name,score&order=score.desc&limit=10`,
+          { headers: { apikey: supabaseKey, Authorization: `Bearer ${supabaseKey}` } }
+        );
+        if (!response.ok) throw new Error('Erro ao buscar');
+        const players = await response.json();
+        renderDisplayRanking(Array.isArray(players) ? players : []);
+      } catch (err) {
+        const status = document.getElementById('displayStatus');
+        if (status) status.textContent = 'Não foi possível carregar o ranking agora.';
+      }
+    }
+
+    function renderDisplayRanking(players) {
+      const list = document.getElementById('displayRankingList');
+      const status = document.getElementById('displayStatus');
+      if (!list) return;
+
+      if (!players.length) {
+        if (status) status.textContent = 'Nenhum jogador ainda. Seja o primeiro!';
+        return;
+      }
+
+      if (status) status.textContent = '';
+
+      const medals = ['🥇', '🥈', '🥉'];
+      const colors = [
+        { border: 'rgba(250,204,21,0.5)', bg: 'rgba(250,204,21,0.07)', score: '#facc15' },
+        { border: 'rgba(161,161,170,0.4)', bg: 'rgba(161,161,170,0.06)', score: '#a1a1aa' },
+        { border: 'rgba(180,120,60,0.4)',  bg: 'rgba(180,120,60,0.06)',  score: '#b4783c' }
+      ];
+      const defaultColor = { border: 'rgba(255,255,255,0.08)', bg: 'rgba(255,255,255,0.04)', score: '#39ff14' };
+
+      list.innerHTML = '';
+
+      players.forEach((player, i) => {
+        const c = colors[i] || defaultColor;
+        const isTop3 = i < 3;
+        const item = document.createElement('div');
+        item.style.cssText = `
+          display: grid;
+          grid-template-columns: 72px 1fr auto;
+          align-items: center;
+          gap: 20px;
+          padding: ${isTop3 ? '20px 24px' : '16px 24px'};
+          border-radius: 20px;
+          border: 1px solid ${c.border};
+          background: ${c.bg};
+          transition: all 400ms ease;
+        `;
+        item.innerHTML = `
+          <span style="font-size:${isTop3 ? '2.4rem' : '1.4rem'};text-align:center;">
+            ${medals[i] || `<span style="font-size:1rem;font-weight:900;color:#a1a1aa;">${i + 1}º</span>`}
+          </span>
+          <span style="font-size:${isTop3 ? '1.6rem' : '1.2rem'};font-weight:800;letter-spacing:-0.03em;overflow:hidden;text-overflow:ellipsis;white-space:nowrap;">
+            ${player.name || 'Jogador'}
+          </span>
+          <span style="font-size:${isTop3 ? '1.8rem' : '1.3rem'};font-weight:900;color:${c.score};white-space:nowrap;">
+            ${Number.isInteger(Number(player.score)) ? player.score : Number(player.score).toFixed(1)} pts
+          </span>
+        `;
+        list.appendChild(item);
+      });
+    }
 
     function saveSession() {
       try {
@@ -4712,8 +5024,8 @@
 
     function initCustomizeScreen() {
       const avatarOptions = [
-        '🧑‍🚀', '🦊', '🐼', '🦁', '🐸', '🤖',
-        '👾', '🦄', '🐺', '🧙', '🦅', '🐯'
+        '🧑', '👦', '👧', '👨', '👩', '🧔',
+        '👱', '🧑‍🦱', '🧑‍🦰', '🧑‍🦳', '👳', '🧕'
       ];
 
       const colorOptions = [
@@ -6378,6 +6690,10 @@
     ========================================================== */
 
     function initGame() {
+      if (IS_DISPLAY_MODE) {
+        initDisplayMode();
+        return;
+      }
       updateScoreDisplay();
       updateProgress();
       renderSectorCards();
